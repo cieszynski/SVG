@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800">
+    <style>
+        path.hamburger-widget {
+            fill: none;
+            stroke: white;
+            stroke-width: 14;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 40 150;
+        }
+
+        circle.hamburger-widget {
+            stroke: white;
+            stroke-width: 7;
+        }
+    </style>
+    <svg id="b" x="280" y="280">
+        <a xlink:href="#second">
+            <circle class="hamburger-widget" cx="120" cy="120" r="60" fill="green" />
+            <text x="120" y="130" font-size="30" fill="white" stroke="none" text-anchor="middle">X</text>
+        </a>
+    </svg>
+    <svg id="c" x="280" y="280">
+        <a xlink:href="#second">
+            <circle class="hamburger-widget" cx="120" cy="120" r="60" fill="green" />
+            <text x="120" y="130" font-size="30" fill="white" stroke="none" text-anchor="middle">X</text>
+        </a>
+    </svg>
+    <svg id="a" tabindex="-1" stroke-dashoffset="0" x="280" y="280">
+        <circle class="hamburger-widget" cx="120" cy="120" r="60" fill="#444" />
+        <path class="hamburger-widget" d="M 100,100 L 140,100 A 20 20 180 0 1 140,140 L 100,100" />
+        <path class="hamburger-widget" d="M 100,120 L 140,120" />
+        <path class="hamburger-widget" d="M 100,140 L 140,140 A 20 20 180 1 0 140,100 L 100,140" />
+    </svg>
+
+    <animate id="a1" xlink:href="#a" attributeName="stroke-dashoffset" begin="a.click" to="-110.5" dur="0.3s"
+        fill="freeze" />
+    <animate id="a2" xlink:href="#a" attributeName="stroke-dashoffset" begin="a.blur" to="0" dur="0.3s" fill="freeze" />
+
+    <animate xlink:href="#b" attributeName="y" begin="a.click" to="140" dur="0.3s" fill="freeze" />
+    <animate xlink:href="#b" attributeName="y" begin="a.blur" to="280" dur="0.3s" fill="freeze" />
+
+    <animate xlink:href="#c" attributeName="y" begin="a.click" to="420" dur="0.3s" fill="freeze" />
+    <animate xlink:href="#c" attributeName="y" begin="a.blur" to="280" dur="0.3s" fill="freeze" />
+
+    <set xlink:href="#a" attributeName="pointer-events" to="none" begin="a1.begin" fill="freeze" />
+    <set xlink:href="#a" attributeName="pointer-events" to="all" begin="a2.begin" fill="freeze" />
+</svg>
