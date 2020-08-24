@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800"
+    preserveAspectRatio="xMidYMid meet">
+    <defs>
+        <symbol id="quest" viewBox="0 0 134 134" width="134" height="134">
+            <circle id="test" cx="63" cy="63" r="60" stroke-width="7" />
+            <path fill="none" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
+                stroke-dasharray="90 300" d="M 62,97 L 62,97.1 M 62,78 L 62,68 A 20 20 180 1 0 48,38 L 85,64 L 48,86" />
+        </symbol>
+    </defs>
+    <use id="me" xlink:href="#quest" x="50%" y="50%" viewBox="0 0 134 134" stroke-dashoffset="0" fill="red"
+        stroke="white">
+        <animate attributeName="stroke-dashoffset" begin="me.click" to="-97" dur="0.3s" fill="freeze" />
+        <animate attributeName="fill" begin="me.click" to="green" dur="0.3s" fill="freeze" />
+    </use>
+</svg>
